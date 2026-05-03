@@ -154,6 +154,7 @@ for (ik=0; ik<list.length; ik++){ // for loop to parse through names in main fol
 	selectImage("capillary_mask");
 	run("Set Measurements...", "area mean standard modal min center shape median display redirect=["+NameImageCD105+"] decimal=3");
 	run("Analyze Particles...", "display clear");
+	outputCD105segfilename = quantification_folder + GlobalName + "_CD105_AnalyzeParticles.txt";
 	saveAs("Results", outputCD105segfilename);
 	run("Clear Results");
 	
